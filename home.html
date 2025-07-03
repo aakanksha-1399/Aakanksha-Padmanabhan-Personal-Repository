@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Aakanksha Padmanabhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer>
+      // Toggle mobile menu
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+    <style>
+      /* Navbar */
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      /* Mobile menu */
+      #mobile-menu {
+        display: none;
+        background: white;
+        color: #374151; /* gray-700 */
+        padding: 1rem 2rem;
+      }
+      #mobile-menu a {
+        display: block;
+        padding: 0.5rem 0;
+        color: #374151;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a
+            href="home.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Home</a
+          >
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a href="projects.html" class="hover:text-yellow-600">Projects</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with two equal halves -->
+    <section
+      class="bg-gradient-to-br from-purple-50 via-white to-blue-50 py-16 px-6"
+    >
+      <div class="max-w-7xl mx-auto flex">
+        <!-- Left half: image -->
+        <div class="w-1/2 flex justify-center items-center">
+          <img
+            src="/Users/aakankshapadmanabhan/Downloads/Aakanksha Padmanabhan Photo.jpeg"
+            alt="Aakanksha"
+            class="w-72 h-96 object-cover rounded-md shadow-md"
+          />
+        </div>
+        <!-- Right half: text -->
+        <div class="w-1/2 flex flex-col justify-center px-12">
+          <h1 class="text-5xl font-extrabold mb-4 text-purple-800">
+            Hey there! I'm Aakanksha 👋
+          </h1>
+
+          <p class="text-xl text-gray-700 mb-6">
+            A data storyteller with an unhealthy obsession for patterns and plot
+            twists. I am the one who reads the last chapter first and tries to
+            spots the villain in the opening scene. I'm always hunting for
+            connections, whether it's in datasets, between book pages, or hidden
+            Easter eggs in movie frames. Fair warning: I might accidentally
+            spoil endings, but I promise the insights I uncover along the way
+            are worth it!
+          </p>
+
+          <div class="space-x-4">
+            <!-- Purple button -->
+            <a
+              href="resume.pdf"
+              target="_blank"
+              download="Aakanksha_Padmanabhan_Resume.pdf"
+              class="bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition"
+            >
+              Download My Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="py-12 text-center bg-gray-100">
+      <h2 class="text-2xl font-semibold mb-6">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 max-w-7xl mx-auto">
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-lg font-semibold mb-2">
+            Credit Card Fraud Detection 🔍
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Real-time fraud detection: Advanced algorithms safeguarding
+            financial transactions.
+          </p>
+          <a
+            href="credit_card_fraud_detection.html"
+            class="mt-auto text-green-600 font-semibold hover:underline text-sm"
+            >View More &rarr;</a
+          >
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-lg font-semibold mb-2">
+            Manhattan Traffic Insights 🚦
+          </h3>
+          <p class="text-gray-600 text-sm">
+            From raw crash data to risk intelligence: Uncovering hidden safety
+            patterns in NYC traffic data.
+          </p>
+          <a
+            href="manhattan_analysis.html"
+            class="mt-auto text-red-600 font-semibold hover:underline text-sm"
+            >View More &rarr;</a
+          >
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-lg font-semibold mb-2">
+            Celebrity Lookalike (Cloud / AWS) ☁️
+          </h3>
+          <p class="text-gray-600 text-sm">
+            Which celebrity do you look like? - Interactive celebrity matching
+            platform built with React and AWS.
+          </p>
+          <a
+            href="celebrity_lookalike.html"
+            class="mt-auto text-blue-600 font-semibold hover:underline text-sm"
+            >View More &rarr;</a
+          >
+        </div>
+      </div>
+      <a
+        href="projects.html"
+        class="inline-block mt-6 text-blue-600 hover:underline"
+        >View All Projects →</a
+      >
+    </section>
+
+    <!-- Connect With Me Section -->
+    <section class="bg-white py-10 border-t">
+      <div class="max-w-6xl mx-auto text-center px-4">
+        <h5 class="text-2xl font-semibold mb-2">
+          Coffee Chat? Let's Talk! Whether it's about data, projects, or just
+          geeking out over tech!
+        </h5>
+        <div class="flex justify-center items-center space-x-8">
+          <!-- Email -->
+          <a
+            href="mailto:aakankshapadmanabhan9@gmail.com"
+            class="text-gray-600 hover:text-blue-600 inline-flex items-center"
+            aria-label="Email"
+          >
+            <span class="sr-only">Email</span>
+            <svg
+              class="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0l8 5 8-5H4zm0 2.236v13.764h16V6.236l-8 5-8-5z"
+              />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="http://linkedin.com/in/aakanksha-padmanabhan/"
+            target="_blank"
+            class="text-gray-600 hover:text-blue-600"
+            aria-label="LinkedIn"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M4.98 3.5A2.5 2.5 0 007.5 6a2.5 2.5 0 01-2.52 2.5A2.5 2.5 0 013 6a2.5 2.5 0 011.98-2.5zM4 9h3v12H4V9zm7 0h2.69v1.71h.03c.38-.71 1.28-1.46 2.64-1.46 2.83 0 3.35 1.86 3.35 4.28V21h-3v-6.09c0-1.45-.03-3.32-2.02-3.32-2.02 0-2.33 1.58-2.33 3.21V21h-3V9z"
+              />
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="http://github.com/aakanksha-1399"
+            target="_blank"
+            class="text-gray-600 hover:text-blue-600"
+            aria-label="GitHub"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.41 7.86 10.94.58.1.79-.25.79-.56 0-.27-.01-1.14-.02-2.07-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.2 1.79 1.2 1.05 1.8 2.75 1.28 3.42.98.11-.76.41-1.28.75-1.57-2.56-.3-5.26-1.28-5.26-5.7 0-1.26.45-2.3 1.2-3.11-.12-.3-.52-1.52.11-3.17 0 0 .97-.31 3.18 1.2a11.01 11.01 0 015.8 0c2.21-1.51 3.18-1.2 3.18-1.2.63 1.65.23 2.87.11 3.17.75.81 1.2 1.85 1.2 3.11 0 4.42-2.7 5.39-5.27 5.68.42.36.8 1.08.8 2.18 0 1.58-.01 2.86-.01 3.25 0 .31.21.66.8.55A10.5 10.5 0 0023.5 12c0-6.35-5.15-11.5-11.5-11.5z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center text-sm text-gray-500">
+      © 2025 Aakanksha Padmanabhan · Built with ☕ and Tailwind CSS
+    </footer>
+  </body>
+</html>

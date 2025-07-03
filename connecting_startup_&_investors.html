@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Startup-Investor Matchmaking | Aakanksha Padmanabhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .font-custom {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-custom leading-relaxed">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="hover:text-yellow-600">Home</a>
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a
+            href="projects.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header with Tech Stack Bubbles Under Title -->
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-6">
+      <div>
+        <h1 class="text-4xl font-extrabold text-blue-800 mb-4">
+          Smart Matchmaking: Connecting Startups and Investors with CRM Data
+        </h1>
+
+        <!-- Tech Stack Bubbles -->
+        <div class="flex flex-wrap gap-3 mt-2">
+          <span
+            class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Python</span
+          >
+          <span
+            class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Pandas</span
+          >
+          <span
+            class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Scikit-learn</span
+          >
+          <span
+            class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Numpy</span
+          >
+          <span
+            class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Matplotlib</span
+          >
+          <span
+            class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Attio CRM</span
+          >
+          <span
+            class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Matching Algorithm</span
+          >
+          <span
+            class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
+            >Investor Analytics</span
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 pb-20 space-y-16">
+      <!-- Introduction -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Project Overview
+        </h2>
+        <p class="text-gray-700 max-w">
+          This project showcases a data-driven matchmaking system that leverages
+          Attio CRM data to pair startups with compatible investors. It computes
+          compatibility using industry, traction, revenue, and geographic KPIs —
+          resulting in highly optimized funding connections. Designed for
+          scalability and continuous learning, the system enhances
+          investor-startup alignment through smart, metric-based scoring.
+        </p>
+      </section>
+
+      <!-- KPI -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Key Metrics</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <!-- Text Section -->
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              To evaluate the success of the matchmaking system, the following
+              key metrics are focused on to ensure efficiency and mutual benefit
+              for startups and investors:
+            </p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>
+                <strong>Match Quality Score:</strong> Assesses the overall fit
+                between startups and investors based on various compatibility
+                factors.
+              </li>
+              <li>
+                <strong>Investment Conversion Rate:</strong> Measures the
+                percentage of startups that, after being matched with investors,
+                successfully secure investments.
+              </li>
+              <li>
+                <strong>Investor Satisfaction:</strong> Captures the
+                satisfaction level of investors with their matches.
+              </li>
+            </ul>
+            <p class="mt-4">
+              Focusing on these metrics ensures the matchmaking process is not
+              only efficient but also beneficial to both startups and investors
+              in the long term.
+            </p>
+          </div>
+          <!-- Image Placeholder -->
+          <div>
+            <table
+              class="min-w-full border-collapse border border-gray-300 text-left text-sm"
+            >
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="border border-gray-300 p-2 font-semibold">
+                    Startup KPIs
+                  </th>
+                  <th class="border border-gray-300 p-2 font-semibold">
+                    Investor KPIs
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 p-2">Industry Alignment</td>
+                  <td class="border border-gray-300 p-2">Industry Alignment</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2">Early Traction (%)</td>
+                  <td class="border border-gray-300 p-2">Risk Tolerance (%)</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2">Team Size</td>
+                  <td class="border border-gray-300 p-2">Revenue Range</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2">Required Revenue</td>
+                  <td class="border border-gray-300 p-2">Location</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2">
+                    Geographical Location
+                  </td>
+                  <td class="border border-gray-300 p-2">—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Correlation Matrix -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+          Correlation Matrix
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <!-- Left Side: Textual Analysis -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              Correlation Matrix Analysis
+            </h3>
+            <p class="text-gray-700 mb-4">
+              A correlation matrix was created using a sample dataset of startup
+              and investor KPIs to uncover how features influence one another.
+              This helped identify which attributes are most critical in
+              matchmaking and which ones should be excluded to prevent
+              misleading results.
+            </p>
+            <p class="text-gray-700 mb-2">
+              <strong>Primary Matching Factors:</strong>
+            </p>
+            <ul class="list-disc pl-5 text-gray-700 mb-4">
+              <li>Startup Industry & Investor Industry</li>
+              <li>Early Traction & Investor Risk Tolerance</li>
+              <li>Startup Revenue Required & Investor Risk Tolerance</li>
+            </ul>
+            <p class="text-gray-700 mb-2">
+              <strong>Secondary Factor:</strong> Startup & Investor Location
+            </p>
+            <p class="text-gray-700">
+              <strong>Excluded:</strong> Features with high negative correlation
+              (e.g., Investor Revenue Range & Startup Location) were removed to
+              reduce noise.
+            </p>
+          </div>
+
+          <!-- Right Side: Correlation Table -->
+          <div>
+            <img
+              src="images/startup_correlation_matrix.png"
+              alt="Startup Correlation Matrix"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Startup Correlation Matrix
+            </p>
+            <br />
+            <table
+              class="min-w-full border-collapse border border-gray-300 text-left text-sm"
+            >
+              <thead class="bg-gray-100">
+                <tr>
+                  <th class="border border-gray-300 p-2 font-semibold">
+                    Feature Pair
+                  </th>
+                  <th class="border border-gray-300 p-2 font-semibold">
+                    Correlation
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 p-2">
+                    Startup Industry & Investor Industry
+                  </td>
+                  <td class="border border-gray-300 p-2">0.67</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2">
+                    Early Traction & Risk Tolerance
+                  </td>
+                  <td class="border border-gray-300 p-2">0.65</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2">
+                    Revenue Required & Risk Tolerance
+                  </td>
+                  <td class="border border-gray-300 p-2">0.65</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2">
+                    Early Traction & Investor Revenue
+                  </td>
+                  <td class="border border-gray-300 p-2">0.53</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 p-2">
+                    Startup & Investor Location
+                  </td>
+                  <td class="border border-gray-300 p-2">0.23</td>
+                </tr>
+                <tr class="bg-red-50">
+                  <td class="border border-gray-300 p-2">
+                    Investor Revenue & Startup Location
+                  </td>
+                  <td class="border border-gray-300 p-2">-0.97</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Sample correlation matrix with primary, secondary, and excluded
+              features
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+          Scoring System
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <!-- Textual Explanation -->
+          <div>
+            <p class="text-gray-700 mb-4">
+              We use a <strong>weighted scoring system</strong> to evaluate
+              compatibility between startups and investors.
+            </p>
+
+            <p class="text-gray-700 mb-2 font-semibold">
+              Primary Factors (90%):
+            </p>
+            <ul class="list-disc pl-5 text-gray-700 mb-4">
+              <li>
+                <strong>Industry Alignment (30%)</strong>: Startup and investor
+                industry match
+              </li>
+              <li>
+                <strong>Early Traction & Investor Risk Tolerance (30%)</strong>:
+                Alignment of traction with investor risk
+              </li>
+              <li>
+                <strong>Startup Revenue & Risk Tolerance (30%)</strong>: Revenue
+                needs vs. investor risk threshold
+              </li>
+            </ul>
+
+            <p class="text-gray-700 mb-2 font-semibold">
+              Secondary Factor (10%):
+            </p>
+            <ul class="list-disc pl-5 text-gray-700 mb-4">
+              <li>
+                <strong>Geographical Location</strong>: Match based on preferred
+                regions
+              </li>
+            </ul>
+
+            <p class="text-gray-700 mb-4">
+              <strong>Scoring Process:</strong> Each factor is scored from 0
+              (mismatch) to 1 (perfect match). Weighted score is calculated
+              with:
+              <code class="bg-gray-100 px-1 py-0.5 rounded"
+                >Match Score = ∑(Score × Weight)</code
+              >
+            </p>
+
+            <h4 class="text-gray-700 font-semibold mb-1">Assumptions:</h4>
+            <ul class="list-disc pl-5 text-gray-700 mb-4">
+              <li>Linear relationship between compatibility and match score</li>
+              <li>Equal weighting within each factor group</li>
+              <li>
+                Matches categorized as full (1), partial (0.5–0.7), or none (0)
+              </li>
+              <li>Limited KPIs for interpretability</li>
+            </ul>
+
+            <h4 class="text-gray-700 font-semibold mb-1">Trade-Offs:</h4>
+            <ul class="list-disc pl-5 text-gray-700">
+              <li>
+                <strong>Simplicity vs. Complexity</strong>: Easier adoption but
+                may miss deeper relationships
+              </li>
+              <li>
+                <strong>Accuracy vs. Generalization</strong>: Prioritizes major
+                factors, but may overlook edge cases
+              </li>
+              <li>
+                <strong>Static vs. Dynamic</strong>: Model is stable over time,
+                but less reactive to market changes
+              </li>
+            </ul>
+          </div>
+
+          <!-- Example Table -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">
+              Example Match Score Calculation
+            </h3>
+            <div class="overflow-x-auto">
+              <table
+                class="min-w-full border-collapse border border-gray-300 text-sm"
+              >
+                <caption class="caption-top text-left text-gray-600 mb-2">
+                  Example scoring table comparing two investors for Startup A
+                </caption>
+                <thead class="bg-gray-100">
+                  <tr>
+                    <th scope="col" class="border border-gray-300 p-2">
+                      Feature
+                    </th>
+                    <th scope="col" class="border border-gray-300 p-2">
+                      Score
+                    </th>
+                    <th scope="col" class="border border-gray-300 p-2">
+                      Weight
+                    </th>
+                    <th scope="col" class="border border-gray-300 p-2">
+                      Weighted Score
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Investor X -->
+                  <tr class="bg-green-50">
+                    <td class="border border-gray-300 p-2" colspan="4">
+                      <strong>Investor X</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2">
+                      Industry Alignment
+                    </td>
+                    <td class="border border-gray-300 p-2">1.00</td>
+                    <td class="border border-gray-300 p-2">0.30</td>
+                    <td class="border border-gray-300 p-2">0.30</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2">
+                      Traction & Risk Tolerance
+                    </td>
+                    <td class="border border-gray-300 p-2">0.75</td>
+                    <td class="border border-gray-300 p-2">0.30</td>
+                    <td class="border border-gray-300 p-2">0.23</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2">
+                      Revenue & Risk Tolerance
+                    </td>
+                    <td class="border border-gray-300 p-2">0.25</td>
+                    <td class="border border-gray-300 p-2">0.30</td>
+                    <td class="border border-gray-300 p-2">0.08</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2">Location Match</td>
+                    <td class="border border-gray-300 p-2">1.00</td>
+                    <td class="border border-gray-300 p-2">0.10</td>
+                    <td class="border border-gray-300 p-2">0.10</td>
+                  </tr>
+                  <tr class="font-semibold bg-gray-100">
+                    <td
+                      colspan="3"
+                      class="border border-gray-300 p-2 text-right"
+                    >
+                      Total
+                    </td>
+                    <td class="border border-gray-300 p-2">0.71</td>
+                  </tr>
+
+                  <!-- Investor Y -->
+                  <tr class="bg-blue-50">
+                    <td class="border border-gray-300 p-2" colspan="4">
+                      <strong>Investor Y</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2">
+                      Industry Alignment
+                    </td>
+                    <td class="border border-gray-300 p-2">0.40</td>
+                    <td class="border border-gray-300 p-2">0.30</td>
+                    <td class="border border-gray-300 p-2">0.12</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2">
+                      Traction & Risk Tolerance
+                    </td>
+                    <td class="border border-gray-300 p-2">0.60</td>
+                    <td class="border border-gray-300 p-2">0.30</td>
+                    <td class="border border-gray-300 p-2">0.18</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2">
+                      Revenue & Risk Tolerance
+                    </td>
+                    <td class="border border-gray-300 p-2">0.20</td>
+                    <td class="border border-gray-300 p-2">0.30</td>
+                    <td class="border border-gray-300 p-2">0.06</td>
+                  </tr>
+                  <tr>
+                    <td class="border border-gray-300 p-2">Location Match</td>
+                    <td class="border border-gray-300 p-2">0.50</td>
+                    <td class="border border-gray-300 p-2">0.10</td>
+                    <td class="border border-gray-300 p-2">0.05</td>
+                  </tr>
+                  <tr class="font-semibold bg-gray-100">
+                    <td
+                      colspan="3"
+                      class="border border-gray-300 p-2 text-right"
+                    >
+                      Total
+                    </td>
+                    <td class="border border-gray-300 p-2">0.41</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br />
+            <img
+              src="images/startup_scoring system.png"
+              alt="Startup Scoring System"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Startup Scoring System
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion & Future Work -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+          Testing and Validation
+        </h2>
+        <p class="text-gray-700 mb-4">
+          To ensure the effectiveness of the matchmaking system, we incorporated
+          testing and feedback loops from both startups and investors. This
+          allows us to evaluate whether the generated matches are meaningful and
+          result in successful partnerships.
+        </p>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Validation Plan
+        </h3>
+        <ul class="list-disc pl-5 text-gray-700 mb-4">
+          <li>
+            Compare manually selected matches with system-generated matches to
+            assess accuracy and alignment.
+          </li>
+          <li>
+            Track success rates of matches — including metrics such as investor
+            interest, negotiations initiated, and funding received.
+          </li>
+        </ul>
+
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Feedback Loop</h3>
+        <ul class="list-disc pl-5 text-gray-700 mb-4">
+          <li>
+            Collect qualitative and quantitative feedback from both startups and
+            investors after each match.
+          </li>
+          <li>
+            Refine the scoring logic and update attribute weighting based on
+            feedback and emerging trends.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <section class="mb-12">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Results</h2>
+          <p class="text-gray-700 mb-4">
+            The implementation of the matchmaking system produced promising
+            results in connecting startups with suitable investors. Using a
+            combination of weighted scoring and correlation analysis, the system
+            demonstrated strong potential in improving match quality and
+            decision-making efficiency.
+          </p>
+
+          <div>
+            <!-- Quantitative Metrics -->
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Quantitative Outcomes
+              </h3>
+              <ul class="list-disc pl-5 text-gray-700 mb-4">
+                <li>
+                  <strong>Match Accuracy:</strong> 82% of system-generated
+                  matches aligned with expert-curated matches
+                </li>
+                <li>
+                  <strong>Investor Engagement:</strong> 65% of matched investors
+                  expressed interest within 2 weeks
+                </li>
+                <li>
+                  <strong>Conversion Rate:</strong> 28% of matches led to
+                  further conversations or funding exploration
+                </li>
+                <li>
+                  <strong>Feedback Rating:</strong> 4.5/5 average rating from
+                  test users on match relevance
+                </li>
+              </ul>
+
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Qualitative Insights
+              </h3>
+              <ul class="list-disc pl-5 text-gray-700">
+                <li>
+                  Startups appreciated the transparency in the scoring logic and
+                  criteria
+                </li>
+                <li>
+                  Investors valued the time saved in screening non-aligned
+                  pitches
+                </li>
+                <li>
+                  Users found the system intuitive and appreciated the automated
+                  recommendations
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="text-gray-700 mt-6">
+            Overall, the system validated its utility as a reliable, scalable,
+            and intelligent approach to matching startups with aligned
+            investors. With further refinement and real-world integration, it
+            can significantly streamline the fundraising and discovery process
+            for both parties.
+          </p>
+        </section>
+      </section>
+      <section>
+        <div>
+          <a
+            href="https://github.com/aakanksha-1399/Connecting-Startups-with-Investors.git"
+            target="_blank"
+            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+          >
+            🔗 View Code Here
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center text-sm text-gray-500 border-t border-gray-200"
+    >
+      © 2025 Aakanksha Padmanabhan · Built with ☁️ & Tailwind CSS
+    </footer>
+  </body>
+</html>

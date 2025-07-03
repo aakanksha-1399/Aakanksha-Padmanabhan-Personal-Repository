@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Gesture Recognition & Background Manipulation | Aakanksha Padmanabhan
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="hover:text-yellow-600">Home</a>
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a
+            href="projects.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-4">
+      <h2 class="text-4xl font-extrabold text-blue-800 mb-6">
+        Gesture Recognition and Background Manipulation
+      </h2>
+
+      <!-- Tech Stack -->
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Python</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >OpenCV</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >MediaPipe</span
+        >
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+          >PyTorch</span
+        >
+        <span
+          class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Machine Learning</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >CNN</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >SVC</span
+        >
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+          >cvzone</span
+        >
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-20 space-y-4">
+      <!-- Introduction -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Project Overview
+        </h2>
+        <p class="text-gray-700 max-w">
+          This project focuses on recognizing hand gestures and changing the
+          live video background color using computer vision and machine
+          learning. It uses hand landmark detection and segmentation models to
+          enable real-time gesture-controlled background color changes.
+        </p>
+      </section>
+
+      <!-- ✋ Gesture Recognition Module -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Gesture Recognition Module
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              This module enables real-time hand gesture recognition using
+              computer vision and machine learning. I began by using Google's
+              MediaPipe Hand Landmark Detection to extract 21 precise keypoints
+              from the user's hand, which capture detailed spatial information
+              about finger positions and hand orientation. These keypoints were
+              organized into JSON format to streamline preprocessing and ensure
+              efficient model training and prediction.
+            </p>
+            <p class="mb-4">
+              To classify gestures, I initially implemented the K-Nearest
+              Neighbors (KNN) algorithm. However, due to performance bottlenecks
+              and lower-than-expected accuracy on complex hand shapes, I
+              transitioned to Support Vector Classification (SVC). This
+              significantly improved both accuracy (reaching ~90%) and real-time
+              responsiveness. The pipeline involves normalizing and flattening
+              the landmark data before feeding it into the SVC model.
+            </p>
+            <p class="mb-4">
+              Once trained, the model is integrated into a live video feed where
+              it continuously predicts gestures based on incoming hand
+              keypoints. These predictions are then used to dynamically trigger
+              background changes, enabling a smooth and interactive user
+              experience.
+            </p>
+            <p class="mb-4">
+              This module demonstrates my ability to build end-to-end ML
+              pipelines — from data extraction and preprocessing to model
+              selection, evaluation, and real-time deployment — while leveraging
+              tools like MediaPipe, OpenCV, and scikit-learn.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/gesture_recognition.png"
+              alt="Hand landmark detection using MediaPipe (21 keypoints)"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Hand landmark detection using MediaPipe (21 keypoints)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Balancing -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Background Segmentation and Color Manipulation
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              This module focuses on dynamically altering the background of a
+              live video stream based on real-time human segmentation. To
+              achieve this, I integrated multiple pre-trained semantic
+              segmentation models to isolate the human subject from the
+              background and perform targeted background replacement. The
+              backbone of this pipeline is DeepLabV3 with ResNet101, accessed
+              via PyTorch’s torchvision library.
+            </p>
+            <p class="mb-4">
+              The process begins by capturing frames from a video feed, which
+              are preprocessed using standard PyTorch transforms. These frames
+              are passed through the segmentation models to generate pixel-wise
+              class predictions, identifying the human subject with high
+              precision. A binary segmentation mask is generated and applied to
+              isolate the person from the frame. The background is then replaced
+              with a specified color, with smooth blending achieved using
+              OpenCV’s <code>addWeighted()</code> function. The result is a
+              visually compelling output where gesture-based interactions
+              trigger dynamic background changes — for example, a "thumbs up"
+              gesture turns the background green, while a "thumbs down" makes it
+              red.
+            </p>
+            <p class="mb-2 font-medium">
+              The module employs three distinct segmentation strategies:
+            </p>
+            <ul class="list-disc list-inside mb-4">
+              <li>
+                <strong>DeepLabV3</strong> for robust semantic segmentation with
+                high accuracy.
+              </li>
+              <li>
+                <strong>Human Segmentor</strong>, a fine-tuned pipeline focused
+                solely on detecting and isolating human figures in video frames.
+              </li>
+              <li>
+                <strong>Semantic Segmenter</strong> built using LRASPP with
+                MobileNetV3-Large, offering lightweight, efficient segmentation
+                ideal for real-time performance.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <img
+              src="images/gesture_thumbs_up.png"
+              alt="Sample output of background manipulation"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Background color changes to green on thumbs up
+            </p>
+            <br />
+            <img
+              src="images/gesture_thumbs_down.png"
+              alt="Sample output of background manipulation"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Background color changes to red on thumbs down
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Model Selection -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Ethical Considerations
+        </h2>
+        <div class="text-gray-700 max-w">
+          <p class="mb-4">
+            Ethical responsibility was a core focus throughout the development
+            of this project. We took deliberate measures to ensure that the
+            system operates fairly, respects privacy, and minimizes risk of
+            misuse. The following key principles guided our approach:
+          </p>
+
+          <ul class="list-disc list-inside space-y-3">
+            <li>
+              <strong>Privacy Protection:</strong><br />
+              All data used in this project was sourced from publicly available
+              Kaggle datasets that follow established privacy guidelines. No
+              personal or identifiable information was collected or processed.
+            </li>
+
+            <li>
+              <strong>Bias Mitigation:</strong><br />
+              To reduce the potential for bias, we avoided using raw image data
+              during training. Instead, we extracted abstracted hand landmarks
+              using MediaPipe, which represent structural information only. This
+              approach helps ensure the model remains unbiased with respect to
+              race, gender, or background.
+            </li>
+
+            <li>
+              <strong>Prevention of Misuse:</strong><br />
+              The gesture recognition model is limited to detecting simple
+              actions — such as "thumbs up" and "thumbs down." By narrowing the
+              scope of predictions, we reduce the potential for inappropriate or
+              unintended applications of the system.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <a
+            href="https://drive.google.com/file/d/1QlRFiJOX_YVdC_gNPfs2GmlpBFEE2Ka4/view?usp=sharing"
+            target="_blank"
+            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+          >
+            🔗 View Demo Here
+          </a>
+          <br />
+          <br />
+          <a
+            href="https://github.com/ramprasad555/Gesture-based-background-manipulation-in-live-camera.git"
+            target="_blank"
+            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+          >
+            🔗 View Code Here
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm text-gray-500">
+      © 2025 Aakanksha Padmanabhan · Built with ☕ and Tailwind CSS
+    </footer>
+  </body>
+</html>

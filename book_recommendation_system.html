@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Recommendation System | Aakanksha Padmanabhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="hover:text-yellow-600">Home</a>
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a
+            href="projects.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-4">
+      <h2 class="text-4xl font-extrabold text-blue-800 mb-6">
+        Book Recommendation System
+      </h2>
+
+      <!-- Tech Stack -->
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Python</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Flask</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Pandas</span
+        >
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Scikit-learn</span
+        >
+        <span
+          class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Machine Learning</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Cosine Similarity</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >SQLite</span
+        >
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 pb-20 space-y-16">
+      <!-- Project Overview -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Project Overview
+        </h2>
+        <p class="text-gray-700 max-w">
+          This web-based book recommendation system leverages machine learning
+          to suggest titles based on both popularity metrics and user
+          preferences. Using cosine similarity and content-based filtering, it
+          delivers personalized recommendations tailored to individual input.
+          Built with Python, Flask, and scikit-learn, the application features a
+          clean, interactive interface for seamless search and real-time
+          suggestions.
+        </p>
+      </section>
+
+      <!-- Data Overview -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Data Overview</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              The project leverages data-driven techniques to deliver insightful
+              book recommendations by analyzing user behavior and preferences.
+              Through effective data processing and machine learning algorithms,
+              it demonstrates my ability to extract meaningful patterns and
+              build user-centric models.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-1 mt-2">
+              <li>
+                Identified the top 50 popular books using comprehensive analysis
+                of user ratings and reviews.
+              </li>
+              <li>
+                Applied cosine similarity for personalized recommendations based
+                on user-inputted book rankings.
+              </li>
+              <li>
+                Developed an interactive Flask-based front-end to visualize and
+                deploy the recommendation system seamlessly.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="images/bookrecommendation_home.png"
+              alt="Book Recommendation UI Screenshot"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Book Recommendation UI home
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popularity-Based Recommendation -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Popularity-Based Book Recommendation
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              In this module, I developed a popularity-driven book
+              recommendation system by analyzing user ratings and reviews. The
+              system filters books with at least 250 ratings to ensure reliable
+              popularity metrics, then ranks them by average rating to highlight
+              the top 50 most favored titles. Data preprocessing involved
+              merging multiple datasets and aggregating ratings to create
+              meaningful features. This approach demonstrates my ability to
+              engineer and clean large datasets, extract relevant insights, and
+              implement business rules to deliver interpretable recommendations.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>
+                Merged and cleaned data from multiple sources including user
+                ratings and book metadata.
+              </li>
+              <li>
+                Applied filtering thresholds to ensure statistical significance
+                in recommendations.
+              </li>
+              <li>
+                Aggregated and sorted ratings to identify the top 50 books by
+                popularity.
+              </li>
+              <li>
+                Serialized results with pickle for efficient downstream use and
+                deployment.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="images/bookrecommendation_top50.png"
+              alt="Book Recommendation UI Screenshot"
+              class="rounded-xl shadow-lg max-w-md w-full mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Book Recommendation Top 50
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collaborative Filtering -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Collaborative Filtering Based Recommendation
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              This module implements a user-based collaborative filtering
+              recommendation system using cosine similarity on user-item rating
+              matrices. I filtered the dataset to include only active users with
+              over 200 ratings and books with sufficient user engagement,
+              enhancing recommendation accuracy. The system transforms user
+              ratings into a pivot table to calculate similarity scores between
+              books, enabling personalized book suggestions based on user
+              preferences. This project highlights my skills in matrix
+              manipulation, similarity computations, and real-world model
+              implementation using Python and scikit-learn.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>
+                Filtered users and books based on rating counts to reduce noise
+                and improve model robustness.
+              </li>
+              <li>
+                Created a user-item matrix and handled missing data with
+                appropriate imputation.
+              </li>
+              <li>
+                Computed cosine similarity to measure item-to-item closeness for
+                recommendation.
+              </li>
+              <li>
+                Developed a recommendation function returning relevant book
+                titles and metadata dynamically.
+              </li>
+              <li>
+                Saved model artifacts with pickle for efficient integration into
+                web apps or APIs.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="images/bookrecommendation_collaborative.png"
+              alt="Book Recommendation UI Screenshot"
+              class="rounded-xl shadow-lg max-w-md w-full mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Book Recommendation Collaborative Filtering
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Project Results -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Results</h2>
+        <p>
+          The Book Recommendation System successfully delivered accurate and
+          user-friendly suggestions through a combination of popularity-based
+          and collaborative filtering techniques. The following outcomes
+          demonstrate its effectiveness and real-world applicability:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 space-y-2">
+          <li>
+            Identified and displayed the top 50 most popular books, ensuring
+            reliable suggestions based on real user feedback.
+          </li>
+          <li>
+            Provided personalized book recommendations tailored to user
+            preferences using cosine similarity, achieving high relevance and
+            diversity in results.
+          </li>
+          <li>
+            Achieved a seamless web interface using Flask, enabling real-time
+            interaction and usability without requiring technical expertise from
+            the user.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Demo and Code Links -->
+      <section>
+        <a
+          href="https://github.com/aakanksha-1399/book-recommendation-system.git"
+          target="_blank"
+          class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+          >🔗 View Code Here</a
+        >
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm text-gray-500">
+      © 2025 Aakanksha Padmanabhan · Built with ☕ and Tailwind CSS
+    </footer>
+  </body>
+</html>

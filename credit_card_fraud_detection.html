@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Credit Card Fraud Detection | Aakanksha Padmanabhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+      /* Table styling */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 0.5rem 0.75rem;
+        text-align: left;
+      }
+      th {
+        background-color: #8b5cf6;
+        color: white;
+        font-weight: 600;
+      }
+      tr:nth-child(even) {
+        background-color: #f9fafb;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="hover:text-yellow-600">Home</a>
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a
+            href="projects.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-4">
+      <h2 class="text-4xl font-extrabold text-blue-800 mb-6">
+        Credit Card Fraud Detection with Real-Time Monitoring
+      </h2>
+
+      <!-- Tech Stack -->
+      <div class="flex flex-wrap gap-2 mt-4 max-w">
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Python</span
+        >
+        <span
+          class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Pandas</span
+        >
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+          >NumPy</span
+        >
+        <span
+          class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Scikit-Learn</span
+        >
+        <span
+          class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Random Forest</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Decision Tree</span
+        >
+        <span
+          class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Logistic Regression</span
+        >
+        <span
+          class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Neural Networks</span
+        >
+        <span
+          class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Undersampling</span
+        >
+        <span
+          class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Folium</span
+        >
+        <span
+          class="bg-purple-200 text-purple-900 px-3 py-1 rounded-full text-sm font-medium"
+          >Streamlit</span
+        >
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-20 space-y-16">
+      <!-- Introduction -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Project Overview
+        </h2>
+        <p class="text-gray-700 max-w">
+          This project tackles the challenge of identifying fraudulent credit
+          card transactions using machine learning. With rising digital
+          payments, preventing fraud is critical — this model aims to detect
+          anomalies that signal suspicious activity.
+        </p>
+      </section>
+
+      <!-- Data Overview -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800">Data Overview</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              The dataset comprises real-world financial transactions with a
+              significant imbalance between fraudulent and non-fraudulent cases.
+              Missing values and inconsistencies were handled using statistical
+              imputation and data cleaning methods to achieve 100% data
+              completeness.
+            </p>
+            <p>
+              Categorical variables such as transaction type and location were
+              converted into numerical formats via one-hot and label encoding.
+              Robust scaling techniques normalized transaction amounts and
+              mitigated the impact of outliers.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/CC_Fraud and Legitimate Transactions.png"
+              alt="Data Overview Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Visualization showing data distribution and cleaning process
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Balancing -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Balancing Dataset
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              The dataset contains 1.85 million transactions, with only 0.41%
+              classified as fraudulent, creating a significant class imbalance.
+              To address this, three techniques were tested: no balancing, SMOTE
+              oversampling, and undersampling with random sampling. Without
+              balancing, the model was biased and missed many fraud cases. SMOTE
+              improved minority representation but lowered precision and recall.
+              Undersampling balanced the classes effectively, yielding the best
+              precision and recall, and was therefore selected. Figures 1 and 2
+              compare these methods visually and numerically.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/cc_balancing_dataset.png"
+              alt="Data Overview Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Visualization showing data distribution and cleaning process
+            </p>
+            <br />
+            <table
+              class="table-auto border-collapse border border-gray-300 text-center mx-auto"
+            >
+              <thead>
+                <tr>
+                  <th class="border border-gray-300 px-4 py-2">Sampling</th>
+                  <th class="border border-gray-300 px-4 py-2">Accuracy</th>
+                  <th class="border border-gray-300 px-4 py-2">Precision</th>
+                  <th class="border border-gray-300 px-4 py-2">Recall</th>
+                  <th class="border border-gray-300 px-4 py-2">F1-Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Not Balanced</td>
+                  <td class="border border-gray-300 px-4 py-2">100.00%</td>
+                  <td class="border border-gray-300 px-4 py-2">0.76</td>
+                  <td class="border border-gray-300 px-4 py-2">0.33</td>
+                  <td class="border border-gray-300 px-4 py-2">0.46</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">Oversampling</td>
+                  <td class="border border-gray-300 px-4 py-2">97.00%</td>
+                  <td class="border border-gray-300 px-4 py-2">0.12</td>
+                  <td class="border border-gray-300 px-4 py-2">0.64</td>
+                  <td class="border border-gray-300 px-4 py-2">0.20</td>
+                </tr>
+                <tr>
+                  <td class="border border-gray-300 px-4 py-2">
+                    Undersampling
+                  </td>
+                  <td class="border border-gray-300 px-4 py-2">86.00%</td>
+                  <td class="border border-gray-300 px-4 py-2">0.88</td>
+                  <td class="border border-gray-300 px-4 py-2">0.84</td>
+                  <td class="border border-gray-300 px-4 py-2">0.86</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Evaluation of the Sampling Techniques for Balancing the Dataset
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Model Selection -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Model Selection
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <div class="mb-4">
+              <p>
+                We evaluated four models in this study: Logistic Regression,
+                Decision Tree, Random Forest, and Neural Network — each selected
+                for its ability to handle complex classification tasks.
+              </p>
+              <ul class="list-disc list-inside">
+                <li>
+                  <strong>Logistic Regression:</strong> A linear model suitable
+                  for binary classification tasks.
+                </li>
+                <li>
+                  <strong>Decision Tree:</strong> Handles categorical and
+                  non-linear data, making it effective for identifying complex
+                  fraud patterns.
+                </li>
+                <li>
+                  <strong>Neural Network:</strong> A deep learning model that
+                  detects subtle patterns across multiple features.
+                </li>
+                <li>
+                  <strong>Random Forest:</strong> An ensemble of decision trees
+                  that improves pattern recognition and reduces overfitting.
+                </li>
+              </ul>
+              <br />
+              <div class="mb-4">
+                <h1 class="text-lg font-semibold mb-2">Evaluation Metrics:</h1>
+                <p>
+                  The performance of each model was evaluated using four major
+                  criteria:
+                </p>
+                <ul class="list-disc list-inside mt-2 space-y-2">
+                  <li>
+                    <strong>Accuracy:</strong> The percentage of total
+                    transactions correctly classified as either fraudulent or
+                    non-fraudulent.
+                  </li>
+                  <li>
+                    <strong>Precision:</strong> The proportion of predicted
+                    fraud cases that were actually fraudulent — higher precision
+                    means fewer false alarms.
+                  </li>
+                  <li>
+                    <strong>Recall:</strong> The proportion of actual fraud
+                    cases that were correctly identified — higher recall means
+                    fewer missed frauds.
+                  </li>
+                  <li>
+                    <strong>F1-score:</strong> The harmonic mean of precision
+                    and recall, providing a balanced measure of the model’s
+                    fraud detection performance.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="images/cc_model_comparison.png"
+              alt="Data Overview Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Evaluation of models
+            </p>
+            <br />
+            <table>
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Accuracy</th>
+                  <th>Recall</th>
+                  <th>Precision</th>
+                  <th>F1 Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Random Forest</td>
+                  <td>86.24%</td>
+                  <td>84%</td>
+                  <td>80%</td>
+                  <td>82%</td>
+                </tr>
+                <tr>
+                  <td>Decision Tree</td>
+                  <td>82.50%</td>
+                  <td>78%</td>
+                  <td>75%</td>
+                  <td>76.5%</td>
+                </tr>
+                <tr>
+                  <td>Logistic Regression</td>
+                  <td>79.30%</td>
+                  <td>70%</td>
+                  <td>72%</td>
+                  <td>71%</td>
+                </tr>
+                <tr>
+                  <td>Neural Networks</td>
+                  <td>85.00%</td>
+                  <td>82%</td>
+                  <td>78%</td>
+                  <td>80%</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Evaluation of the model based on the metrics
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- UI -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          User Interface (UI)
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p>
+              Developed an interactive Streamlit dashboard providing real-time
+              fraud classification and alerts. The dashboard visualizes key
+              fraud indicators such as unusual spending spikes and frequent
+              small transactions, enabling analysts to monitor transaction
+              trends effectively.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/cc_ui.png"
+              alt="Fraud Detection Dashboard UI"
+              class="rounded-xl shadow-lg w-full"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Real-time monitoring dashboard showcasing fraud insights and
+              alerts
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Results</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <h3 class="text-xl font-semibold mb-2">Prediction Output</h3>
+            <p>
+              For each transaction, the system predicts whether it is
+              <strong>fraudulent</strong> or <strong>non-fraudulent</strong>. As
+              shown in <em>Figure 4</em>, the evaluated transaction was
+              identified as fraudulent by the model.
+            </p>
+            <br />
+            <h3 class="text-xl font-semibold mb-2">Transaction Location Map</h3>
+            <p>
+              This map displays the location of the current transaction
+              alongside the user’s past transaction locations. Anomalies, such
+              as purchases from unexpected locations, can help flag suspicious
+              behavior. <em>Figure 5</em> illustrates the spatial anomaly that
+              contributed to fraud detection.
+            </p>
+            <br />
+            <h3 class="text-xl font-semibold mb-2">
+              Transaction Time Deviation
+            </h3>
+            <p>
+              This line graph compares the timestamp of the current transaction
+              against the user's typical transaction times. Deviations from
+              regular patterns may indicate suspicious behavior. In
+              <em>Figure 6</em>, the red line marks the time of the flagged
+              transaction.
+            </p>
+            <br />
+            <h3 class="text-xl font-semibold mb-2">
+              Spending Amount Deviation
+            </h3>
+            <p>
+              This scatter plot shows the current transaction amount relative to
+              the user’s past spending. A significant deviation may suggest
+              fraud. As seen in <em>Figure 7</em>, the current amount is
+              highlighted in red, diverging from the usual pattern.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <img
+              src="images/cc_fraud_prediction.png"
+              alt="Depicting Fraud Status"
+              class="rounded-xl shadow-lg w-full"
+            />
+            <img
+              src="images/cc_location.png"
+              alt="Map showing location of transaction"
+              class="rounded-xl shadow-lg w-full"
+            />
+            <img
+              src="images/cc_amount_deviation.png"
+              alt="Transaction Amount Deviation Graph"
+              class="rounded-xl shadow-lg w-full"
+            />
+            <img
+              src="images/cc_time_deviation.png"
+              alt="Transaction Time Deviation Graph"
+              class="rounded-xl shadow-lg w-full"
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <a
+            href="https://public.tableau.com/app/profile/aakanksha.padmanabhan/viz/DataVisualizationwithTableau_16121871885330/Dashboard1"
+            target="_blank"
+            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+          >
+            🔗 View Code Here
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center text-sm text-gray-500 border-t border-gray-200 mt-auto select-none"
+    >
+      © 2025 Aakanksha Padmanabhan · Built with ☁️ & Tailwind CSS
+    </footer>
+  </body>
+</html>

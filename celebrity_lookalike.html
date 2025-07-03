@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>You're My Celebrity | Aakanksha Padmanabhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="font-semibold hover:text-yellow-600"
+            >Home</a
+          >
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a
+            href="projects.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-4">
+      <h2 class="text-4xl font-extrabold text-blue-800 mb-6">
+        You're My Celebrity
+      </h2>
+
+      <!-- Tech Stack -->
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium"
+          >React</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >AWS Rekognition</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >AWS Lambda</span
+        >
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Amazon S3</span
+        >
+        <span
+          class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+          >AWS API Gateway</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >AWS DynamoDB</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >AWS Amplify</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >AWS CloudWatch</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Postman</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Terraform</span
+        >
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+      <!-- Overview -->
+      <section class="mt-12 mb-10">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Project Overview
+        </h2>
+        <p class="text-gray-700 max-w">
+          This project involved building a serverless web application that lets
+          users upload selfies and find their celebrity lookalikes using AWS
+          Rekognition. It combines an intuitive React front-end with a scalable
+          backend powered by AWS Lambda, API Gateway, and DynamoDB for fast
+          processing and data storage. The app also features automated
+          deployment via Terraform and performance monitoring with CloudWatch to
+          ensure smooth and reliable operation.
+        </p>
+      </section>
+
+      <!-- Features -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Features & Highlights
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              This project incorporates a variety of advanced features designed
+              to enhance user experience and system performance. From intuitive
+              interfaces to optimized backend processing, the highlights
+              demonstrate a scalable, efficient, and user-focused application
+              architecture.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>
+                User-friendly image upload interface built with React for
+                seamless use on both desktop and mobile devices.
+              </li>
+              <li>
+                Celebrity lookalike matching powered by AWS Rekognition,
+                comparing uploaded photos with a curated dataset of over 160
+                celebrities.
+              </li>
+              <li>
+                Real-time feedback mechanisms provide users with progress
+                updates and processing status.
+              </li>
+              <li>
+                Optimized serverless backend using AWS Lambda for image
+                preprocessing, improving speed by 40%.
+              </li>
+              <li>
+                Secure, scalable architecture utilizing AWS API Gateway, S3, and
+                DynamoDB for efficient data management.
+              </li>
+              <li>
+                Persistent user match history stored in DynamoDB, allowing easy
+                access to past results.
+              </li>
+              <li>
+                Comprehensive monitoring and logging with AWS CloudWatch for
+                performance tracking and error detection.
+              </li>
+              <li>
+                Automated deployment pipeline built with Terraform and AWS
+                Amplify for smooth updates and infrastructure management.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="images/celebrity_ui_homepage.png"
+              alt="Celebrity Lookalike UI Homepage"
+              class="rounded-xl shadow-lg max-w-md w-full mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Celebrity Lookalike UI Homepage
+            </p>
+            <br />
+            <img
+              src="images/celebrity_lookalike.png"
+              alt="Celebrity Lookalike Match Result"
+              class="rounded-xl shadow-lg max-w-md w-full mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Celebrity Lookalike Match Result
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Architecture + Performance Efficiency -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+          Architecture & Performance
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-2xl">
+            <p class="mb-4">
+              The application follows a fully serverless architecture using AWS
+              services like API Gateway, Lambda, S3, DynamoDB, and Rekognition.
+              Terraform automates infrastructure provisioning, while AWS Amplify
+              ensures seamless frontend deployment. CloudWatch monitors system
+              performance, enabling real-time visibility and faster debugging.
+            </p>
+            <p>
+              Image processing was optimized by introducing Lambda-based
+              preprocessing, reducing latency by 40%. Asynchronous request
+              handling further improved response times, while confidence
+              thresholds in Rekognition were fine-tuned for better celebrity
+              match accuracy.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/celebrity_lookalike_architecture.png"
+              alt="Architecture Diagram"
+              class="rounded-xl shadow-lg w-full"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Serverless architecture and optimization workflow
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Setup and Tear down -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Deployment & CI/CD
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <!-- Text Section -->
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              The application is deployed using a smooth and fully automated
+              CI/CD pipeline. Terraform provisions and manages infrastructure,
+              while AWS Amplify handles build, deployment, and hosting.
+              Integrated with GitHub, pushing updates to the UI or backend
+              services automatically triggers rebuilds and deployments — making
+              the system highly developer-friendly, scalable, and
+              low-maintenance.
+            </p>
+          </div>
+
+          <!-- Image Section -->
+          <div>
+            <img
+              src="images/celebrity_lookalike_ Setup & Teardown.png"
+              alt="Terraform File Structure"
+              class="rounded-xl shadow-lg max-w-md w-full mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Terraform File Structure
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcomes -->
+      <section>
+        <!-- Text Content -->
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Results</h2>
+        <p>
+          The application successfully matches user-uploaded selfies with
+          celebrity lookalikes using AWS Rekognition, delivering fast and
+          accurate results through a serverless, cloud-native pipeline. The
+          intuitive UI and smooth deployment process ensure an engaging
+          experience, while the backend architecture supports scalability and
+          ease of maintenance. Overall, the project demonstrates a strong
+          integration of cloud infrastructure, real-time image processing, and
+          user-centered design.
+        </p>
+      </section>
+      <br />
+      <section>
+        <a
+          href="https://drive.google.com/file/d/1ZhCktdJ5uNLfwQcKnwpj9FAj7oWTN-SB/view?usp=sharing"
+          target="_blank"
+          class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+        >
+          🔗 View Demo Here
+        </a>
+        <br />
+        <br />
+
+        <a
+          href="mailto:aakankshapadmanabhan9@gmail.com"
+          class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+        >
+          📧 Request Code Access
+        </a>
+        <p class="mb-4">
+          🔒 This is a private project. If you'd like to view the code, feel
+          free to reach out — access can be granted upon request.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center text-sm text-gray-500 border-t border-gray-200 mt-auto select-none"
+    >
+      © 2025 Aakanksha Padmanabhan · Built with ☁️ & Tailwind CSS
+    </footer>
+  </body>
+</html>

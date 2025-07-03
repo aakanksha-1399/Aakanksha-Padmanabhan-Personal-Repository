@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #f9fafb; /* Tailwind gray-50 */
+        color: #111827; /* Tailwind gray-900 */
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Navbar */
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+        /* text-decoration: underline; */
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      /* Mobile menu */
+      #mobile-menu {
+        display: none;
+        background: white;
+        color: #374151; /* gray-700 */
+        padding: 1rem 2rem;
+      }
+      #mobile-menu a {
+        display: block;
+        padding: 0.5rem 0;
+        color: #374151;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      /* Layout container */
+      .page-container {
+        max-width: 1280px;
+        margin: 2rem auto 4rem;
+        padding: 0 1rem;
+        display: flex;
+        gap: 2rem;
+      }
+
+      /* Left TLDR */
+      .tldr-container {
+        flex: 1 1 250px;
+        position: sticky;
+        top: 4rem;
+        align-self: flex-start;
+        border: 1px solid #d1d5db; /* Tailwind gray-300 */
+        border-radius: 0.5rem;
+        padding: 1.5rem 2rem;
+        height: fit-content;
+        background-color: white !important;
+      }
+      .tldr-container h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #7c3aed;
+      }
+      .tldr-container nav a {
+        display: block;
+        padding: 0.5rem 0;
+        font-weight: 800;
+        text-decoration: none;
+        padding-left: 0.5rem;
+        cursor: pointer;
+        color: inherit;
+
+        background-color: transparent;
+      }
+      .tldr-container nav a:hover,
+      .tldr-container nav a:focus,
+      .tldr-container nav a:active {
+        color: #7c3aed;
+        border-left-color: #7c3aed;
+        background-color: white !important;
+        outline: none;
+      }
+
+      /* Right timeline */
+      .timeline-container {
+        flex: 3 1 0;
+        position: relative;
+        padding-left: 80px; /* space for vertical line */
+      }
+
+      /* Vertical timeline line */
+      .timeline-line {
+        position: absolute;
+        top: 1.8%;
+        left: 2.5%;
+        width: 4px;
+        height: 85%;
+        background: #4f46e5;
+        border-radius: 2px;
+      }
+
+      /* Timeline entries */
+      .timeline-entry {
+        position: relative;
+        background: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3rem;
+        padding: 1.75rem 2.5rem;
+        max-width: 900px;
+        padding-left: 60px; /* space for horizontal branch */
+      }
+      /* Horizontal branch from timeline line to box */
+      .timeline-entry::before {
+        content: "";
+        position: absolute;
+        top: 2.5rem; /* aligns roughly with heading */
+        left: -60px; /* branch length = left padding */
+        width: 60px;
+        height: 4px;
+        background: #4f46e5;
+        border-radius: 2px;
+      }
+
+      /* Headings and text inside entries */
+      .timeline-entry h3 {
+        font-weight: 600;
+        color: #5b21b6; /* purple-700 */
+        font-size: 1.375rem;
+        margin-bottom: 0.25rem;
+      }
+      .timeline-entry span {
+        font-style: italic;
+        color: #6b7280; /* gray-500 */
+        display: block;
+        margin-bottom: 0.75rem;
+      }
+      .timeline-entry p,
+      .timeline-entry ul {
+        color: #374151; /* gray-700 */
+        line-height: 1.6;
+      }
+      .timeline-entry ul {
+        list-style: disc inside;
+        margin-top: 0;
+        padding-left: 1rem;
+      }
+
+      /* About Me intro */
+      #about-me {
+        max-width: 1280px;
+        margin: 3rem auto 1rem;
+        padding: 0 1rem;
+        text-align: center;
+      }
+      #about-me h1 {
+        font-size: 2.75rem;
+        font-weight: 800;
+        color: #4f46e5;
+        margin-bottom: 0.5rem;
+      }
+      #about-me p {
+        font-size: 1.25rem;
+        max-width: 900px;
+        margin: 0 auto;
+        color: #374151;
+        line-height: 1.7;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 0.875rem;
+        color: #6b7280;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .page-container {
+          flex-direction: column;
+          max-width: 95%;
+        }
+        .tldr-container {
+          position: relative;
+          top: auto;
+          margin-bottom: 2rem;
+          width: 100%;
+          padding: 1rem;
+        }
+        .timeline-container {
+          padding-left: 20px;
+          width: 100%;
+        }
+        .timeline-line {
+          left: 20px;
+        }
+        .timeline-entry {
+          max-width: 100%;
+          padding-left: 50px;
+        }
+        .timeline-entry::before {
+          left: -50px;
+          width: 50px;
+          height: 3px;
+          top: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="hover:text-yellow-600">Home</a>
+          <a
+            href="aboutme.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >About Me</a
+          >
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a href="projects.html" class="hover:text-yellow-600">Projects</a>
+        </div>
+        <div class="md:hidden">
+          <button
+            onclick="toggleMenu()"
+            class="focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden">
+        <a href="home.html">Home</a>
+        <a href="aboutme.html" class="font-semibold">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">Resume</a>
+      </div>
+    </nav>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+
+    <!-- About Me Intro -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <h2 class="text-3xl font-extrabold text-blue-800 mb-8">About Me</h2>
+
+      <!-- Main Content -->
+      <div class="page-container">
+        <!-- TLDR Jump Links -->
+        <aside
+          class="tldr-container"
+          aria-label="Jump links to timeline events"
+        >
+          <h2>Jump to the part</h2>
+          <nav>
+            <a href="#bmeas">Bright Mind Enrichment and Schooling</a>
+            <a href="#rit">Rochester Institute of Technology</a>
+            <a href="#education-rit">Masters at RIT</a>
+            <a href="#accenture">Accenture</a>
+            <a href="#education-somaiya">Bachelors at K.J Somaiya</a>
+            <a href="#central-bank-of-india"
+              >Central Bank of India - Tata Consultancy Services</a
+            >
+            <a href="#smart_consultant_pvt_ltd">Smart Consultant Pvt. Ltd</a>
+          </nav>
+        </aside>
+
+        <!-- Timeline -->
+        <section class="timeline-container" aria-label="Professional timeline">
+          <div class="timeline-line"></div>
+
+          <!-- Entry 1 -->
+          <article
+            id="bmeas"
+            class="timeline-entry"
+            tabindex="0"
+            aria-label="Bright Mind Enrichment and Schooling, Data Analyst, Jan 2025 to Present"
+          >
+            <h3>Bright Mind Enrichment and Schooling (BMEAS)</h3>
+            <span>Data Analyst — Jan 2025 &ndash; Present</span>
+            <ul>
+              <li>
+                Analyzed volunteer resource allocation and workload across 12
+                teams using SQL and R clustering analysis to optimize task
+                assignments.
+              </li>
+              <li>
+                Built PostgreSQL database tracking volunteer metrics for
+                data-driven program decisions.
+              </li>
+              <li>
+                Developed predictive R time series models forecasting volunteer
+                trends with 86% accuracy.
+              </li>
+              <li>
+                Created 10+ interactive dashboards providing real-time
+                stakeholder insights.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Entry 2 -->
+          <article
+            id="rit"
+            class="timeline-entry"
+            tabindex="0"
+            aria-label="Rochester Institute of Technology, Data Analyst, Mar 2023 to Dec 2024"
+          >
+            <h3>Rochester Institute of Technology</h3>
+            <span>Data Analyst — Mar 2023 &ndash; Dec 2024</span>
+            <ul>
+              <li>
+                Analyzed user behavior on alumni and giving pages with Python
+                and SQL to optimize website.
+              </li>
+              <li>
+                Collaborated with marketing on donation metrics supporting
+                6-month fundraising campaigns.
+              </li>
+              <li>
+                Conducted A/B testing on newsletters with 1,000+ recipients to
+                optimize engagement.
+              </li>
+              <li>
+                Built dashboards in Looker Studio and Tableau tracking KPIs for
+                10+ stakeholders.
+              </li>
+            </ul>
+          </article>
+
+          <!-- Entry 3 -->
+          <article
+            id="education-rit"
+            class="timeline-entry"
+            tabindex="0"
+            aria-label="Education - Rochester Institute of Technology"
+          >
+            <h3>Rochester Institute of Technology</h3>
+            <span>Masters of Science in Computer Science — Dec 2024</span>
+            <p>
+              Graduated with a 3.7 GPA, developing expertise in data science,
+              machine learning, cloud platforms, and advanced analytics.
+            </p>
+          </article>
+          <!-- Entry 4 -->
+          <article
+            id="accenture"
+            class="timeline-entry"
+            tabindex="0"
+            aria-label="Accenture, Application Developer Associate, Jun 2021 to Aug 2022"
+          >
+            <h3>Accenture</h3>
+            <span
+              >Application Developer Associate — Jun 2021 &ndash; Aug 2022</span
+            >
+            <ul>
+              <li>
+                Developed ETL pipelines using Talend and SQL to process large
+                datasets (50M+ records).
+              </li>
+              <li>
+                Built predictive models with Scikit-learn for maintenance
+                analytics.
+              </li>
+              <li>
+                Created automated classification systems for insurance claims
+                with 94% accuracy.
+              </li>
+            </ul>
+          </article>
+          <!-- Entry 5 -->
+          <article
+            id="education-somaiya"
+            class="timeline-entry"
+            tabindex="0"
+            aria-label="Education - K.J Somaiya Institute of Engineering and Information Technology"
+          >
+            <h3>
+              K.J Somaiya Institute of Engineering and Information Technology
+            </h3>
+            <span
+              >Bachelors of Engineering in Information Technology — Jun
+              2021</span
+            >
+            <p>
+              Graduated with a 3.8 GPA, focusing on programming, data
+              structures, and software engineering principles.
+            </p>
+          </article>
+
+          <article
+            id="central-bank-of-india"
+            class="timeline-entry"
+            tabindex="0"
+            aria-label="Intern | Central Bank of India"
+          >
+            <h3>Central Bank of India - Tata Consultancy Services</h3>
+            <span>Intern — Dec 2019 – Jan 2020</span>
+            <p>
+              <li>
+                Trained in enterprise data integration using IBM Integration
+                Bus, gaining exposure to large-scale data workflows.
+              </li>
+              <li>
+                Developed understanding of system architecture and middleware in
+                financial services.
+              </li>
+              <li>
+                Demonstrated adaptability and professionalism in a high-stakes
+                banking environment.
+              </li>
+            </p>
+          </article>
+          <article
+            id="smart_consultant_pvt_ltd"
+            class="timeline-entry"
+            tabindex="0"
+            aria-label="Intern | Social Media Website Development"
+          >
+            <h3>Smart Consultant Pvt. Ltd</h3>
+            <span>Intern — Jul 2019 – Oct 2019</span>
+            <p>
+              <li>
+                Developed a social media platform enabling user sign-up,
+                authentication, and content sharing, using HTML, CSS,
+                JavaScript, and PHP.
+              </li>
+              <li>
+                Managed user data securely, ensuring smooth back-end data
+                handling and authentication processes.
+              </li>
+              <li>
+                Gained experience in full-stack development, enhancing ability
+                to deploy and integrate data-driven applications.
+              </li>
+            </p>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      © 2025 Aakanksha Padmanabhan · Built with ☕ and Tailwind CSS
+    </footer>
+  </body>
+</html>

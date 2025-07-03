@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UiPath Amazon Monitor Bot | Aakanksha Padmanabhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="hover:text-yellow-600">Home</a>
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a
+            href="projects.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-6">
+      <h2 class="text-4xl font-extrabold text-blue-800 mb-6">
+        UiPath Amazon Price Monitoring Bot
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+          >UiPath Studio</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >UiPath Orchestrator</span
+        >
+        <span
+          class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Excel</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >SMTP / Outlook Automation</span
+        >
+        <span
+          class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Data Scraping</span
+        >
+        <span
+          class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Exception Handling & Logging</span
+        >
+      </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 pb-20 space-y-16">
+      <!-- Project Overview -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Project Overview
+        </h2>
+        <p class="text-gray-700 max-w">
+          A UiPath bot was designed and deployed to automatically scrape
+          real-time product data from Amazon every 30 minutes, ensuring
+          up-to-date insights on prices, availability, and reviews. The bot
+          processes and cleans the data, triggers timely email alerts for
+          significant changes, and generates dynamic reports to support smarter
+          pricing decisions. Leveraging UiPath Orchestrator, the solution
+          delivers continuous automation with high reliability and improved
+          operational efficiency.
+        </p>
+      </section>
+
+      <!-- Data Overview -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Data Overview</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p>
+              The dataset consists of real-time product information scraped from
+              Amazon, including price, stock availability, customer reviews, and
+              ratings. Data is captured every 30 minutes to track dynamic
+              changes, enabling timely detection of price fluctuations, stock
+              updates, and new listings. This structured and cleaned dataset
+              supports detailed trend analysis and personalized alert
+              generation.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/uipath_email_automation.png"
+              alt="UiPath Automation Dashboard"
+              class="rounded-xl shadow-lg max-w-md w-full mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              UiPath automation of Email
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features and Highlights -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Features & Highlights
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <ul class="list-disc list-inside space-y-2">
+              <li>
+                <strong>Automated Data Scraping:</strong> Scrapes Amazon product
+                details every 30 minutes for up-to-date insights.
+              </li>
+              <li>
+                <strong>Efficient Data Extraction:</strong> Uses UiPath’s Data
+                Scraping Wizard and structured data activities for 40% faster
+                extraction.
+              </li>
+              <li>
+                <strong>Dynamic Alerts:</strong> Sends email notifications only
+                for significant price drops and stock changes to reduce noise.
+              </li>
+              <li>
+                <strong>Robust Workflow:</strong> Includes data cleaning,
+                filtering, and exception handling to ensure 99% uptime and data
+                accuracy.
+              </li>
+              <li>
+                <strong>Scheduled Automation:</strong> Deploys via UiPath
+                Orchestrator with reliable monitoring and failure recovery.
+              </li>
+              <li>
+                <strong>Insightful Reporting:</strong> Generates Excel reports
+                with price trends for better decision-making.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="images/uipath_excel.png"
+              alt="UiPath Automation Dashboard"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Excel Sheet with scrapped images
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section>
+        <div class="text-gray-700 max-w">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+            Results & Conclusion
+          </h2>
+          <p>
+            The UiPath automation reduced manual effort by 80% and boosted data
+            extraction efficiency by 40%. Scheduled scraping every 30 minutes
+            and automated email alerts every two hours ensured 99% uptime and
+            real-time updates. Optimized exception handling lowered execution
+            failures by 30%, while targeted notifications increased email open
+            rates by 25%, enabling smarter pricing and inventory decisions. This
+            project showcases how automation improves efficiency, accuracy, and
+            business responsiveness.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <a
+            href="https://github.com/aakanksha-1399/UiPath-Amazon-Price-Bot.git"
+            target="_blank"
+            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+          >
+            🔗 View Code Here
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm text-gray-500">
+      © 2025 Aakanksha Padmanabhan · Built with ☕ and Tailwind CSS
+    </footer>
+  </body>
+</html>

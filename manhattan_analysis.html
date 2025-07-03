@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Manhattan Traffic Insights | Aakanksha Padmanabhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="hover:text-yellow-600">Home</a>
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a
+            href="projects.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-6">
+      <h2 class="text-4xl font-extrabold text-blue-800 mb-6">
+        Manhattan Traffic Insights
+      </h2>
+
+      <!-- Tech Stack -->
+      <div class="flex flex-wrap gap-2 mt-4 max-w-3xl">
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+        >
+          Python
+        </span>
+        <span
+          class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+        >
+          Pandas
+        </span>
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+        >
+          Data Cleaning
+        </span>
+        <span
+          class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium"
+        >
+          Seaborn
+        </span>
+        <span
+          class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm font-medium"
+        >
+          Visualization
+        </span>
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+        >
+          Urban Planning
+        </span>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 pb-20 space-y-16">
+      <!-- Project Overview -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Project Overview
+        </h2>
+        <p class="text-gray-700 max-w">
+          This project analyzes Manhattan traffic accident data from 2019 and
+          2020 to uncover spatial and temporal patterns using clustering and
+          exploratory techniques. We applied DBSCAN for hotspot detection and
+          compared accident trends before and during the pandemic. The focus was
+          on data cleaning, preprocessing, and extracting insights for urban
+          planning and safety improvements.
+        </p>
+      </section>
+
+      <!-- Data Overview -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">Data Overview</h2>
+        <p class="text-gray-700 max-w">
+          This project leveraged a comprehensive dataset of New York City
+          traffic accidents, focusing exclusively on the Manhattan borough to
+          deliver targeted insights. The raw data required extensive cleaning
+          due to numerous missing values and redundant columns, such as combined
+          location data and separate injury/fatality counts, which were
+          consolidated for clarity.
+        </p>
+        <br />
+        <ul class="list-disc list-inside text-gray-700 space-y-1">
+          <li>
+            <strong>Date and Time:</strong> Enabled detailed temporal analysis
+            of accident patterns by day and hour.
+          </li>
+          <li>
+            <strong>Zip Codes:</strong> Facilitated regional breakdowns to
+            identify high-risk areas within Manhattan.
+          </li>
+          <li>
+            <strong>Geographic Coordinates (Latitude & Longitude):</strong>
+            Supported spatial clustering to uncover accident hotspots.
+          </li>
+          <li>
+            <strong>Injury and Fatality Counts:</strong> Provided severity
+            metrics for each incident.
+          </li>
+        </ul>
+        <br />
+        <p class="text-gray-700 max-w">
+          The dataset was quantized by temporal (day, hour) and spatial (zip
+          code) dimensions, allowing for granular analysis of trends and
+          clusters. Despite some missing and unspecified data points, the
+          preprocessing steps ensured a clean and robust dataset suitable for
+          advanced clustering and visualization techniques.
+        </p>
+        <br />
+        <p class="text-gray-700 max-w">
+          This data preparation phase highlights my ability to handle messy
+          real-world data, perform meaningful feature selection, and ready the
+          data for insightful analytics.
+        </p>
+      </section>
+
+      <!-- Insights 1 -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Shift in Accident Hotspots Due to COVID-19 Behavior
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              Clustering with DBSCAN revealed a stark shift in accident hotspots
+              between 2019 and 2020. In 2019, clusters concentrated around
+              tourist destinations like Hudson Yards (The Vessel, The Edge)
+              indicated heavy footfall and travel activity. However, in 2020,
+              post-lockdown, accident density increased in residential and
+              restaurant-heavy areas like Lexington Avenue — a trend likely
+              driven by increased food delivery traffic during stay-at-home
+              periods.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/manhattan_insight1.png"
+              alt="Data Overview Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Visualization showing data distribution and cleaning process
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inights 2 -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          First 100 Days of 2020
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              In the first 100 days of 2020, several external events appear to
+              have influenced pedestrian and vehicle behavior, reflected in the
+              accident patterns. Using timestamped collision data, we observed
+              notable spikes in traffic incidents that correlate with major
+              public events and emergencies in New York City.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 mt-4">
+              <li>
+                <strong>Jan 30–31:</strong> The WHO declared the coronavirus a
+                global health emergency, possibly increasing public anxiety and
+                altering movement patterns.
+              </li>
+              <li>
+                <strong>Feb 7:</strong> A protest and shooting incident near
+                Brooklyn Hospital may have drawn more people to the streets,
+                contributing to higher street-level activity.
+              </li>
+              <li>
+                <strong>Mar 3–6:</strong> Federal emergency funding
+                announcements related to COVID-19 might have prompted early
+                responses such as people leaving offices or commuting earlier
+                than usual.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img
+              src="images/manhattan_insight_2.png"
+              alt="Data Overview Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Visualization of the dates and the spikes
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Insights 3 -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Peak Accident Times During the Day
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              Analysis of accident data by hour reveals a notable spike around 3
+              PM. This peak likely corresponds to increased traffic during lunch
+              hours, when many people are on the road after eating and may
+              experience drowsiness. Additionally, this time coincides with a
+              surge in food delivery activities, which contributes to higher
+              vehicle density and, consequently, more accidents. Understanding
+              this pattern helps identify critical time windows for traffic
+              safety interventions.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/manhattan_time_of_day.png"
+              alt="Data Overview Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Visualization of accident time of the day
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Insights 4 -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Weekday Accident Patterns
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              Examining accidents across days of the week shows that Fridays
+              consistently experience the highest number of collisions. This
+              increase can be attributed to end-of-week rushes, social events,
+              and gatherings that contribute to heavier traffic volumes and
+              potentially riskier driving behavior. Recognizing this weekly
+              trend enables targeted planning for traffic control and public
+              safety measures on the busiest days.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/manhattan_day_of_week.png"
+              alt="Data Overview Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Visualization of the accident day of the week
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outcomes -->
+      <section>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Results</h3>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w">
+            <p class="mb-4">
+              This project uncovered meaningful patterns in Manhattan’s traffic
+              accident data, highlighting key temporal peaks around 3 PM and
+              Fridays, driven by lunch hour traffic and end-of-week activity.
+              Spatial analysis revealed shifts in accident hotspots from tourist
+              areas in 2019 to more residential and delivery-focused zones in
+              2020, reflecting behavioral changes during COVID-19 lockdowns.
+              Leveraging DBSCAN for spatial clustering and careful data
+              preprocessing enabled these actionable insights. These findings
+              not only demonstrate strong data science skills but also provide
+              valuable information that can help guide urban planning and
+              traffic safety improvements in Manhattan.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <a
+            href="mailto:aakankshapadmanabhan9@gmail.com"
+            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+          >
+            📧 Request Code Access
+          </a>
+          <p class="mb-4">
+            🔒 This is a private project. If you'd like to view the code, feel
+            free to reach out — access can be granted upon request.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm text-gray-500">
+      © 2025 Aakanksha Padmanabhan · Built with ☕ and Tailwind CSS
+    </footer>
+  </body>
+</html>

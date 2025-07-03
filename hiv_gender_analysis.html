@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gender Inequality in HIV Infections | Aakanksha Padmanabhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      nav a.font-semibold {
+        font-weight: 600;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="hover:text-yellow-600">Home</a>
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a
+            href="projects.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <!-- Header Section -->
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-4">
+      <h2 class="text-4xl font-extrabold text-blue-800 mb-6">
+        Gender Inequality in HIV Infections in Adolescents
+      </h2>
+
+      <!-- Tech Stack -->
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Tableau</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Data Cleaning</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Global Health</span
+        >
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Gender Analysis</span
+        >
+        <span
+          class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Visualization</span
+        >
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-20 space-y-16">
+      <!-- Introduction -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Project Overview
+        </h2>
+        <p class="text-gray-700 max-w">
+          This project focuses on recognizing hand gestures and changing the
+          live video background color using computer vision and machine
+          learning. It uses hand landmark detection and segmentation models to
+          enable real-time gesture-controlled background color changes.
+        </p>
+      </section>
+
+      <!-- Data Engineering & Cleaning -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Data Engineering & Cleaning
+        </h2>
+
+        <ul class="list-disc list-inside space-y-2">
+          <li>
+            Collected and integrated international HIV datasets from multiple
+            sources to create a unified database.
+          </li>
+          <li>
+            Addressed missing values by applying appropriate imputation and
+            removal techniques to maintain data integrity.
+          </li>
+          <li>
+            Standardized country and region names to ensure consistent
+            geographical referencing across datasets.
+          </li>
+          <li>
+            Filtered the data to isolate the adolescent age group (10–19 years)
+            for focused analysis.
+          </li>
+          <li>
+            Segmented data by gender and region, enabling detailed comparisons
+            of infection rates across demographics.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Insight 1 -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Gender Disparity in HIV Cases
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              HIV disproportionately affects adolescent girls in most regions.
+              This disparity highlights gender-based vulnerabilities—such as
+              unequal access to education, healthcare, and protection—that
+              increase girls' risk of infection and reduce access to care.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="images/HIV_Insight_1.png"
+              alt="HIV Classification"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Gender Disparity in HIV Cases
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Insight 2 -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Living with HIV vs. New Infections
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              Data shows that while the number of adolescents living with HIV
+              remains high, the rate of new infections has not grown
+              proportionally in recent years. This suggests improved survival
+              rates, likely due to expanded access to antiretroviral therapy
+              (ART), increased awareness, and better healthcare interventions.
+              However, it also underscores the need for sustained treatment
+              access and targeted prevention programs, especially for vulnerable
+              groups like adolescent girls.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="images/HIV_Insight_2.png"
+              alt="Living with HIV vs. New Infections"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Living with HIV vs. New Infections
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-16">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Results</h2>
+        <div class="text-gray-700 max-w">
+          <p class="mb-4">
+            This project highlights the persistent gender disparities and
+            regional trends in adolescent HIV infection. Through data-driven
+            insights and interactive visualizations, it underscores the need for
+            targeted public health interventions, especially for adolescent
+            girls who remain disproportionately affected. As healthcare policies
+            evolve, continuous monitoring of these patterns can guide more
+            equitable and effective responses to the global HIV crisis.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div>
+          <a
+            href="https://public.tableau.com/app/profile/aakanksha.padmanabhan/viz/Hiv_Data_Analysis/Dashboard1"
+            target="_blank"
+            class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+          >
+            🔗 View Full Tableau Dashboard
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-sm text-gray-500">
+      © 2025 Aakanksha Padmanabhan · Built with ☕ and Tailwind CSS
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Airline Delay Analysis | Aakanksha Padmanabhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      nav {
+        background: linear-gradient(to right, #3b82f6, #8b5cf6);
+        color: white;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      nav .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav .nav-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+      nav a {
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-900 font-sans">
+    <!-- Navbar -->
+    <nav>
+      <div class="container">
+        <div class="font-extrabold text-xl">Aakanksha Padmanabhan</div>
+        <div class="nav-links hidden md:flex">
+          <a href="home.html" class="hover:text-yellow-600">Home</a>
+          <a href="aboutme.html" class="hover:text-yellow-600">About Me</a>
+          <a href="skills.html" class="hover:text-yellow-600">Skills</a>
+          <a
+            href="projects.html"
+            class="font-bold text-white-800 hover:text-yellow-600"
+            >Projects</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto px-6 pt-12 pb-4">
+      <h2 class="text-4xl font-extrabold text-blue-800 mb-6">
+        Airline Delay Analysis
+      </h2>
+
+      <!-- Tech Stack -->
+      <div class="flex flex-wrap gap-3">
+        <span
+          class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Python</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >PostgreSQL</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >MongoDB</span
+        >
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+          >SQL</span
+        >
+        <span
+          class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Azure</span
+        >
+        <span
+          class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Data Cleaning</span
+        >
+        <span
+          class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Data Normalization
+        </span>
+        <span
+          class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+          >Visualization</span
+        >
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pb-20 space-y-16">
+      <!-- Introduction -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+          Project Overview
+        </h2>
+        <p class="text-gray-700 max-w">
+          Analyzed over 60 million flight records across 11 years to uncover
+          patterns in airline delays and cancellations caused by weather, air
+          traffic, and operational issues. Designed efficient relational and
+          document-based data models using PostgreSQL on Azure and MongoDB to
+          handle complex, large-scale datasets. Extracted actionable insights
+          into route performance and delay causes to support smarter scheduling
+          and reduce flight disruptions.
+        </p>
+      </section>
+
+      <!-- Data Overview -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Data Overview</h2>
+        <p class="mb-4">
+          The dataset spans 11 years of airline flight data across the US and
+          includes over 60 million records. It captures flight delays,
+          cancellations, and causes ranging from weather and carrier issues to
+          NAS and security. Data was sourced from Kaggle, requiring significant
+          preprocessing due to size, inconsistencies, and formatting challenges.
+        </p>
+        <p class="mb-4">
+          Each flight record contains over 25 attributes, including timestamps,
+          airport codes, airline identifiers, and delay durations. The dataset
+          was loaded into PostgreSQL and MongoDB for different phases of
+          analysis. Extensive cleaning was performed, including type
+          conversions, null handling, timestamp standardization, and relational
+          splitting.
+        </p>
+      </section>
+
+      <!-- Data Modeling -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Data Modeling</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              The data was structured using both relational and
+              document-oriented models. In PostgreSQL, flights were normalized
+              across multiple tables:
+            </p>
+            <ul class="list-disc list-inside mb-4">
+              <li><code>Flight</code></li>
+              <li><code>FlightInformation</code></li>
+              <li><code>CancelledFlights</code></li>
+              <li><code>DelayCausation</code></li>
+              <li><code>Delayed</code></li>
+            </ul>
+
+            <p>
+              following 3NF principles. Primary keys and foreign key constraints
+              ensured data integrity and optimized joins.
+            </p>
+            <br />
+            <p class="mb-4">
+              An alternative MongoDB model was also created, nesting flight
+              metadata, delay types, and status inside a single document. This
+              allowed flexible querying across years with varying schema
+              completeness. Indexes were added on carrier and origin-destination
+              fields to improve performance. The ER diagram helped define
+              relationships, and a document schema was used to demonstrate NoSQL
+              flexibility.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="images/airline_delay_analysis_ER.png"
+              alt="Airline Delay Analysis ER Diagram"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Airline Delay Analysis ER Diagram
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Cleaning -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Data Cleaning</h2>
+        <p class="mb-4">
+          Accurate airline delay analysis relies heavily on clean and reliable
+          data. To ensure this, we undertook the following steps:
+        </p>
+
+        <ul class="list-disc list-inside space-y-3">
+          <li>
+            <strong>Duplicate Removal:</strong>
+            Detected and removed duplicate flight records identified by Flight
+            ID, preventing inflated delay counts.
+          </li>
+
+          <li>
+            <strong>Canceled Flights Filtering:</strong>
+            Excluded canceled flights missing cancellation codes, since these
+            entries do not contribute to delay insights.
+          </li>
+
+          <li>
+            <strong>Delay Data Correction:</strong>
+            Cross-checked departure delay values against scheduled and actual
+            departure times to identify and fix inconsistencies.
+          </li>
+          <li>
+            <strong>Invalid Timestamp Exclusion:</strong>Removed flights with
+            unrealistic time entries, such as departures occurring before the
+            scheduled time, to maintain data accuracy.
+          </li>
+        </ul>
+      </section>
+      <!-- Azure Backup -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Azure Backup Server
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              To ensure data security and reliability, an Azure subscription was
+              used to set up backup servers. This provided automated, scalable
+              cloud backups that safeguard our datasets against loss or
+              corruption, enabling seamless recovery and maintaining continuous
+              availability.
+            </p>
+          </div>
+
+          <div>
+            <img
+              src="images/Airline_delay_Azure_backup.png"
+              alt="Airline Delay Analysis Azure Backup"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Airline Delay Analysis Azure Server
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Insights 1 -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Leading Cause for Airline Delay
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              NAS (National Aviation System) delays are the primary cause of
+              flight delays and cancellations in 2018, driven by factors like
+              airport operations, heavy traffic volume, and air traffic control.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/leading cause for airline delay.png"
+              alt="Leading cause for airline delay Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Leading cause for airline delay Visualization
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Insights 2 -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Carriers with Most Delays in 2018
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              Southwest Airlines experienced the highest number of flight delays
+              in 2018, highlighting opportunities for improvement in operational
+              efficiency.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/airline with most delays in 2018.png"
+              alt="Delay Visualization in 2018 Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Delay Visualization in 2018 Visualization
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Insights 3 -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Airlines with Significant Flight Cancellations in 2015
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              Identifying airlines with over 500 canceled flights in 2015 helps
+              understand historical operational challenges and informs future
+              service improvements.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/airline flight cancellation 2015.png"
+              alt="Airline Flight Cancellations 2015 Visualization"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Airline Flight Cancellations 2015 Visualization
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Insights 4 -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">
+          Popular Destination Pairings During Peak Times
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div class="text-gray-700 max-w-xl">
+            <p class="mb-4">
+              Certain destinations are frequently visited together during peak
+              periods, suggesting potential for package deals or targeted
+              promotions to optimize tourism and airline collaboration.
+            </p>
+          </div>
+          <div>
+            <img
+              src="images/popular destination pairing.png"
+              alt="Popular Destination Pairings"
+              class="rounded-xl shadow-lg max-w-md w-85 mx-auto"
+            />
+            <p class="mt-2 text-sm text-gray-500 italic text-center">
+              Popular Destination Pairings
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results -->
+      <section>
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Results</h2>
+        <p class="mb-4">
+          Our analysis revealed that the National Aviation System (NAS) delays
+          are the primary cause of flight disruptions, accounting for the
+          majority of delays in 2018. Southwest Airlines experienced the highest
+          number of delays, while a few carriers showed significant flight
+          cancellations in 2015. We also identified key airline collaborations
+          and destination pairs that peak during holiday seasons, suggesting
+          opportunities for operational improvements and package deals. These
+          insights offer valuable guidance for airlines and airport authorities
+          to prioritize resources, reduce delays, and enhance passenger
+          satisfaction.
+        </p>
+      </section>
+      <section>
+        <p class="mb-4">
+          🔒 This is a private project. If you'd like to view the code, feel
+          free to reach out — access can be granted upon request.
+        </p>
+        <a
+          href="mailto:aakankshapadmanabhan9@gmail.com"
+          class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-full transition"
+        >
+          📧 Request Code Access
+        </a>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center text-sm text-gray-500 border-t border-gray-200 mt-auto select-none"
+    >
+      © 2025 Aakanksha Padmanabhan · Built with ☕ and Tailwind CSS
+    </footer>
+  </body>
+</html>
